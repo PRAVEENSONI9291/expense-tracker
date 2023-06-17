@@ -15,6 +15,22 @@ list.addEventListener('click',editvalue);
 function AddValues(e){
     e.preventDefault();
 
+    if(document.getElementById('expense').value=="")
+    {
+        alert("Please Enter the Expense Amount");
+        return;
+    }
+    else if(document.getElementById('description').value=="")
+    {
+        alert("Please Enter the Description");
+        return;
+    }
+    else if(document.getElementById('category').selectedIndex==0)
+    {
+        alert("Please Enter the Category");
+        return;
+    }
+
 
     let amount= document.getElementById('expense').value;
     let description= document.getElementById('description').value;
